@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climat Zone</title>
+    <!--  CSS -->
+    <link rel="stylesheet" href="mapstyle.css">
+    <!-- Leaflet's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <!-- Leaflet's LIBRARY -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+   <!--   BOOTSTRAP LINK'S CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+   
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+<!--   JQUERY DECLARATION -->
+
+<script src="datasource.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!--   END OF LINKS DECLARATION -->
+</head>
+<!--   END OF HEAD -->
+<body>
+     <!--  NAVBAR MENU BOOTSTRAP-->
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="AccueilMap.html">MAP </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="AccueilMap.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <!-- CHANGE VIEW BTN STARTING-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Zones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"> <button class="btn " id="0" onclick="changeview(id)">  Zone CDA 223</button></a>
+                <a class="dropdown-item" ><button class="btn " id="1" onclick="changeview(id)">  Zone CDA 224</button></a>
+                <a class="dropdown-item" ><button class="btn " id="2" onclick="changeview(id)">  Zone CDA 226 </button></a>
+                <a class="dropdown-item" ><button class="btn " id="3" onclick="changeview(id)">  Zone CDA 243</button></a>
+                <a class="dropdown-item" ><button class="btn " id="4" onclick="changeview(id)">  Zone CDA 244</button></a>
+                <a class="dropdown-item" ><button class="btn " id="5" onclick="changeview(id)">  Zone CDA 245</button></a>
+                <a class="dropdown-item" ><button class="btn " id="6" onclick="changeview(id)">  Zone CDA 943</button></a>
+                <a class="dropdown-item" ><button class="btn " id="7" onclick="changeview(id)">  Zone CDA 225</button></a>
+                <a class="dropdown-item" ><button class="btn " id="8" onclick="changeview(id)">  Zone CDA 231</button></a>
+                <a class="dropdown-item" ><button class="btn " id="9" onclick="changeview(id)">  Zone CDA 237</button></a>
+                <a class="dropdown-item" ><button class="btn " id="10" onclick="changeview(id)"> Zone CDA 233</button></a>
+                <a class="dropdown-item" ><button class="btn " id="11" onclick="changeview(id)"> Zone CDA 236</button></a>
+                <a class="dropdown-item" ><button class="btn " id="12" onclick="changeview(id)"> Zone CDA 234</button></a>
+                <a class="dropdown-item" ><button class="btn " id="13" onclick="changeview(id)"> Zone CDA 235</button></a>
+                <a class="dropdown-item" ><button class="btn " id="14" onclick="changeview(id)"> Zone CDA 242</button></a>
+                <a class="dropdown-item" ><button class="btn " id="15" onclick="changeview(id)"> Zone CDA 218</button></a>
+                <a class="dropdown-item" ><button class="btn " id="16" onclick="changeview(id)"> Zone CDA 241</button></a>
+                <a class="dropdown-item" ><button class="btn " id="17" onclick="changeview(id)"> Zone CDA 247</button></a>
+                <a class="dropdown-item" ><button class="btn " id="18" onclick="changeview(id)"> Zone CDA 213</button></a>
+                <a class="dropdown-item" ><button class="btn " id="19" onclick="changeview(id)"> Zone CDA 221</button></a>
+                <a class="dropdown-item" ><button class="btn " id="20" onclick="changeview(id)"> Zone CDA 211</button></a>
+                <a class="dropdown-item" ><button class="btn " id="21" onclick="changeview(id)"> Zone CDA 222</button></a>
+                <a class="dropdown-item" ><button class="btn " id="22" onclick="changeview(id)"> Zone CDA 2202</button></a>
+                <a class="dropdown-item" ><button class="btn " id="23" onclick="changeview(id)"> Zone CDA 212</button></a>
+                <a class="dropdown-item" ><button class="btn " id="24" onclick="changeview(id)"> Zone CDA 214</button></a>
+                <a class="dropdown-item" ><button class="btn " id="25" onclick="changeview(id)"> Zone CDA 216</button></a>
+                <a class="dropdown-item" ><button class="btn " id="25" onclick="changeview(id)"> Zone CDA 217</button></a>
+                <a class="dropdown-item" ><button class="btn " id="26" onclick="changeview(id)"> Zone CDA 246</button></a>
+
+              </div>
+            </li>
+            <!-- CHANGE VIEW BTN ENDING-->
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          
+
+        </div>
+      </nav>
+      <!-- END OF NAVBAR MENU BOOTSTRAP-->
+
+      <!-- OPEN STREET MAP -->
+      <div id="map">
+      <script>
+
+        
+      var map = L.map('map').setView([31.792305849269,-7.080168000000015], 6);
+        L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/#map=7/31.550/-4.988&layers=Y">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+}).addTo(map);
+
+var geojsonFeature 
+  
+L.geoJSON(geojsonFeature).addTo(map);
+L.geoJson(statesData).addTo(map);
+var villes = [[34.465214007289596,-5.954865093888907],[34.54383952103466,-5.994088626602321],[34.54548425293693,-5.9870930375724],[34.55259342124354,-6.073313492995042],
+[34.51685666378568,-6.212362809614702],
+[34.55171241977653,-6.179801395961216],
+[34.56106910741617,-6.123567882337068],
+[34.691598644600944,-6.097173690795898],
+[34.658480164416886,-6.141581632653061],
+[34.707714868013106,-6.209652240459736],
+[34.60074963498647,-6.217337036132813],
+[34.60210941410622,-6.325770786830357],
+[34.419616630618336,-6.216156005859375],
+[34.41287646474061,-6.3236561759573515],
+[34.46253270628546,-6.1384784153529575],
+[34.401534724504764,-6.104079536769701],
+[34.4422493657654,-6.06232549103213],
+[34.41901710891945,-6.034861973353794],
+[34.310354319169925,-5.701632358060024],
+[34.44987814188707,-5.67213249206543],
+[34.36847825586772,-5.753322357827044],
+[34.40735755255181,-5.852833409463206],
+[34.49116597770469,-5.470567183061079],
+[34.24103058927239,-5.747106300210052],
+[34.29810519911693,-5.8510589599609375],
+[34.2300595662876,-5.855146135602679],
+[34.281380014518206,-5.987722907267826],
+[34.38587517346058,-5.923397410999645]]
+
+
+function changeview(id) {
+  map.flyTo(villes[id], 15)
+}
+
+/*function getMeteo(d) {
+  
+  $.getJSON("https://api.openweathermap.org/data/2.5/onecall?lat=34.566231&lon=-5.975642&exclude=current,minutely,hourly&appid=aeb38512d52006194d6b7c57a0362aee&units=metric", function(data, status){
+    d=data["daily"][0]["temp"]["day"]
+  });
+  
+}*/
+
+
+var cda = [[223,34.465214007289596,-5.954865093888907],
+[224,34.54383952103466,-5.994088626602321],
+[226,34.54548425293693,-5.9870930375724],
+[243,34.55259342124354,-6.073313492995042],
+[244,34.51685666378568,-6.212362809614702],
+[245,34.55171241977653,-6.179801395961216],
+[943,34.56106910741617,-6.123567882337068],
+[225,34.691598644600944,-6.097173690795898],
+[231,34.658480164416886,-6.141581632653061],
+[237,34.707714868013106,-6.209652240459736],
+[233,34.60074963498647,-6.217337036132813],
+[236,34.60210941410622,-6.325770786830357],
+[234,34.419616630618336,-6.216156005859375],
+[235,34.41287646474061,-6.3236561759573515],
+[242,34.46253270628546,-6.1384784153529575],
+[218,34.401534724504764,-6.104079536769701],
+[241,34.4422493657654,-6.06232549103213],
+[247,34.41901710891945,-6.034861973353794],
+[213,34.310354319169925,-5.701632358060024],
+[221,34.44987814188707,-5.67213249206543],
+[211,34.36847825586772,-5.753322357827044],
+[222,34.40735755255181,-5.852833409463206],
+[2202,34.49116597770469,-5.470567183061079],
+[212,34.24103058927239,-5.747106300210052],
+[214,34.29810519911693,-5.8510589599609375],
+[216,34.2300595662876,-5.855146135602679],
+[217,34.281380014518206,-5.987722907267826],
+[246,34.38587517346058,-5.923397410999645]]
+
+var markers = []
+
+for (let index = 0; index < cda.length; index++) {
+  var d = 0
+  $.getJSON("https://api.openweathermap.org/data/2.5/onecall?lat="+cda[index][1]+"&lon="+cda[index][2]+"&exclude=current,minutely,hourly&appid=aeb38512d52006194d6b7c57a0362aee&units=metric", function(data, status){
+
+    markers[index] = L.marker([cda[index][1], cda[index][2]]).addTo(map);
+  L.featureGroup([markers[index]]).bindPopup("<table 'style=tr,th,td{padding:8px;}' ><tr><th>CDA &nbsp &nbsp&nbsp &nbsp</th><th>temp max &nbsp &nbsp &nbsp &nbsp</th><th>temp min &nbsp &nbsp &nbsp &nbsp </th><th> humidity</th></tr><tr><td>"+cda[index][0]+"</td><td>"+data["daily"][0]["temp"]["max"]+"C°</td><td>"+data["daily"][0]["temp"]["min"]+"C°</td> <td>"+data["daily"][0]["humidity"]+"%</td> </tr><tr><td></table>").addTo(map)
+ 
+  });
+
+}
+
+
+
+</script>
+</div>
+</body>
+</html>
